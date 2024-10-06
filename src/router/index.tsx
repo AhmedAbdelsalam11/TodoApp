@@ -1,5 +1,4 @@
 import { createBrowserRouter, createRoutesFromElements,Route } from "react-router-dom";
-
 import Home from "../pages";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -8,6 +7,7 @@ import ProtectedRoute from "../component/auth/ProtectedRoute";
 import PageNotFound from "../pages/PageNotfound";
 import ErrorHandler from "../component/errors/ErrorHandler";
 import Todos from "../pages/Todos";
+import Profile from "../pages/Profile";
 
 
 const storageKey = "loggedInUser";
@@ -31,18 +31,7 @@ const router = createBrowserRouter(
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute
-              isAllowed={userData?.jwt}
-              redirectPath="/login"
-              data={userData}
-            >
-              <h2>Profile page</h2>
-            </ProtectedRoute>
-          }
-        />
+        
         <Route
           path="/todos"
           element={

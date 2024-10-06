@@ -52,6 +52,6 @@ import { IloginForm, IregisterForm } from "../interfaces";
             minleangth:8,
         }
     },
-    
-   
+ 
 ]
+

@@ -1,9 +1,10 @@
+import TodosList from "../component/TodosList"
 
 const Home = () => {
    return(
-      <div>
-        home
-      </div>
+      <section className="max-w-2xl mx-auto">
+      <TodosList/>
+    </section>
    )
 }
 
